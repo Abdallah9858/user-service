@@ -19,7 +19,7 @@ pipeline {
                 script {
                     sh 'docker stop flask_app_container || true'
                     sh 'docker rm flask_app_container || true'
-                    sh 'docker run -d --name flask_app_container -p 3000:3000 local-flask-app:latest'
+                    sh 'docker run -d --name app_container -p 3000:3000 local-flask-app:latest'
                 }
             }
         }
